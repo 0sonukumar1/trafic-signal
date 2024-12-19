@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        .div1 {
+            background-color: ;
+            mediumpurple;
+            color: white;
+            margin: 0px;
+            height: 140px
+        }
+
+        .in {
+            width: 80px;
+            height: 76px;
+            text-align: center;
+            font-size: 80px;
+            background-color: white;
+            blanchedalmond;
+            margin-bottom: 5px;
+            color: black;
+            transform: translateY(-4px);
+            border: 1px;
+            border-color: white;
+
+        }
+
+        .div2 {
+            background-color: black;
+            width: 140px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: ;
+            float: right;
+            margin-top: 10px;
+            border-radius: 80px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: ;
+            border-top-right-radius: ;
+            padding-top: 0px;
+            display: inline-block;
+            justify-content: center;
+            align-content: center;
+            display: flex
+        }
+
+        button {
+            width: 90px;
+            height: 90px;
+            margin: 15px
+        }
+
+        .btnr {
+            background-color: gray;
+
+            border: 1px;
+            margin-left: ;
+            border-radius: 50%;
+            margin-top: 5px
+        }
+
+        .btny {
+            background-color: gray;
+            border-radius: 50%;
+            border: 1px;
+        }
+
+        .btng {
+            background-color: gray;
+            border: 1px;
+            border-radius: 50%;
+            margin-bottom: 0px
+        }
+
+        .btni {
+            width: 250px;
+            height: 80px;
+            font-size: 70px;
+            background-color: ;
+            blanchedalmond;
+            color: black;
+            blanchedalmond;
+            border-color: whitesmoke;
+            border-top-color: white;
+            border-right-color: white;
+            text-align: center;
+            display: inline-block;
+            margin: 0px;
+            float: right
+        }
+
+        .div3 {
+            background-color: black;
+            width: 50px;
+            height: 200px;
+            float: right;
+            transform: translate(95px, 380px)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div1">
+        <br>
+        <input type="text" class="in" value="9">
+        <p class="btni">instruction</p>
+    </div>
+
+    <div class="div2">
+        <button class="btnr"></button>
+        <button class="btny"></button>
+        <button class="btng"></button>
+    </div>
+
+    <div class="div3">
+
+    </div>
+
+
+    <script>
+        let btni = document.querySelector(".btni");
+        let btnr = document.querySelector(".btnr");
+        let btny = document.querySelector(".btny");
+        let btng = document.querySelector(".btng");
+
+
+        setTimeout(() => {
+            console.log("start")
+            btnr.style.backgroundColor = "red";
+            btnr.style.border = ""
+            btni.innerHTML = "STOP";
+            btni.style.color = ""
+
+        },000)
+
+        setTimeout(() => {
+            btni.innerHTML = "READY";
+            btnr.style.backgroundColor = "gray";
+
+
+        }, 9000)
+
+        setTimeout(() => { btny.style.backgroundColor = "yellow" }, 9000)
+
+        setTimeout(() => {
+            btny.style.backgroundColor = "gray";
+            btng.style.backgroundColor = "green";
+            btni.innerHTML = "GO";
+            btni.style.color = ""
+        }, 18000);
+
+        setTimeout(() => {
+            btng.style.backgroundColor = "gray";
+            console.log("end")
+        }, 27000)
+
+
+
+
+
+
+
+        setInterval(() => {
+
+            setTimeout(() => {
+                console.log("start")
+                btnr.style.backgroundColor = "red";
+                btni.innerHTML = "STOP"
+
+            },000)
+
+            setTimeout(() => {
+                btnr.style.backgroundColor = "gray"
+            }, 9000)
+
+            setTimeout(() => {
+                btny.style.backgroundColor = "yellow";
+                btni.innerHTML = "READY"
+            }, 9000)
+
+            setTimeout(() => {
+                btny.style.backgroundColor = "gray";
+                btng.style.backgroundColor = "green";
+                btni.innerHTML = "GO"
+            }, 18000);
+
+            setTimeout(() => {
+                btng.style.backgroundColor = "gray";
+                console.log("end")
+            }, 27000)
+
+        }, 27000)
+
+
+
+        let inp = document.querySelector(".in");
+        /*
+        setInterval(()=>{
+          
+        inp.value=`${eval
+        (inp.value)-1
+          
+        }`;
+        },1000)
+        
+        */
+
+
+        for (let i = 1; i < 10; i++) {
+            setTimeout(() => {
+                inp.value = `${eval
+                    (inp.value) - 1
+
+                    }`;
+                console.log(8)
+            }, 1000 * i)
+
+        }
+
+
+        setInterval(() => {
+
+            for (let i = 1; i < 10; i++) {
+                setTimeout(() => {
+                    inp.value = `${eval
+                        (inp.value) - 1
+
+                        }`;
+                    console.log(8)
+                }, 1000 * i)
+            }
+            inp.value = `9`
+        }, 9000)
+
+
+
+    </script>
+</body>
+
+</html>
